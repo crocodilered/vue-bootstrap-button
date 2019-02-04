@@ -1,0 +1,68 @@
+{
+  "name": "vue-bootstrap-button",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A button component with 'loading' and 'done' indicators for Vue 2 using Bootstrap 4.",
+  "keywords": [
+    "vue",
+    "bootstrap",
+    "bootstrap 4",
+    "button",
+    "loading"
+  ],
+  "homepage": "https://github.com/crocodilered/vue-bootstrap-button",
+  "repository": "github:crocodilered/vue-bootstrap-button",
+  "bugs": {
+    "url": "https://github.com/crocodilered/vue-bootstrap-button/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Serge I. Zolotukhin",
+    "email": "serge.zolotukhin@gmail.com"
+  },
+  "main": "src/components/vue-bootstrap-button.vue",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name vue-bootstrap-button src/components/vue-bootstrap-button.vue",
+    "build:docs": "vue-cli-service build --dest docs",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.5.22",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "material-icons": "^0.3.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
