@@ -1,34 +1,47 @@
 # vue-bootstrap-button
 
-A button component
-with “loading” and “done” indicators.
+A button component with “loading” and “done” indicators.
+
+After you click the button it transforms into endless loading progress. When response comes, okay sign appears and button returns to its normal state.
 
 ## Features
 - Vue 2 using Bootstrap 4 compatible.
 - Easy to use.
 - Material design icons in box.
 
-## Project setup
+## Getting started
+### Installation
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+$ npm install vue-bootstrap-button --save
 ```
 
-### Compiles and minifies for production
+### How to use
+Simply import component and use it on the page. Set loading property to true when data loading starts and to false after finish.
 ```
-npm run build
-```
+<template>
+  <!-- Form here -->
+  <vue-bootstrap-button
+    text="Submit"
+    :loading="loading"
+    @click="submit"
+  />
+</template>
+<script>
+  import VueBootstrapButton from 'vue-bootstrap-button'
 
-### Compiles and minifies for docs
-```
-npm run build:docs
-```
-
-### Lints and fixes files
-```
-npm run lint
+  export default {
+    data () {
+      return {
+        loading: false;
+      }
+    },
+    methods: {
+      submit () {
+        this.loading = true
+        // Await data posting and response here
+        this.loading = false
+      }
+    }
+  }
+</script>
 ```
