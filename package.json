@@ -1,6 +1,6 @@
 {
   "name": "vue-bootstrap-button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "A button component with 'loading' and 'done' indicators for Vue 2 using Bootstrap 4.",
   "keywords": [
