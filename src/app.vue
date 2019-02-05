@@ -9,6 +9,8 @@
         with “loading” and “done” indicators.
       </h1>
 
+      <p><big>After you click the button it transforms into endless loading progress. When response comes, okay sign appears and button returns to its normal state.</big></p>
+
       <h2 id="features">Features</h2>
       <ul class="features">
         <li>Vue 2 using Bootstrap 4 compatible.</li>
@@ -16,8 +18,39 @@
         <li>Material design icons in box.</li>
       </ul>
 
-      <h2 id="installation">Installation</h2>
+      <h2 id="gettingstarted">Getting started</h2>
+
+      <h3 id="installation">Installation</h3>
       <pre>$ npm install vue-bootstrap-button --save</pre>
+
+      <h3 id="installation">How to use</h3>
+      <p>Simply import component and use it on the page. Set <code>loading</code> property to true when data loading starts and to false after finish.</p>
+      <pre><span style="color: #000080; font-weight: bold">&lt;template&gt;</span>
+  <span style="color: #008800; font-style: italic">&lt;!-- Form here --&gt;</span>
+  <span style="color: #000080; font-weight: bold">&lt;vue</span><span style="color: #FF0000">-bootstrap-button</span>
+    <span style="color: #FF0000">text=</span><span style="color: #0000FF">&quot;Submit&quot;</span>
+    <span style="color: #FF0000">:loading=</span><span style="color: #0000FF">&quot;loading&quot;</span>
+    <span style="color: #FF0000;">@click=</span><span style="color: #0000FF">&quot;submit&quot;</span>
+  <span style="color: #000080; font-weight: bold">/&gt;</span>
+<span style="color: #000080; font-weight: bold">&lt;/template&gt;</span>
+&lt;script&gt;
+  <span style="color: #000080; font-weight: bold">import</span> VueBootstrapButton from <span style="color: #0000FF">&#39;vue-bootstrap-button&#39;</span>
+
+  <span style="color: #000080; font-weight: bold">export</span> <span style="color: #000080; font-weight: bold">default</span> {
+    data () {
+      <span style="color: #000080; font-weight: bold">return</span> {
+        loading: <span style="color: #000080; font-weight: bold">false</span>;
+      }
+    },
+    methods: {
+      submit () {
+        <span style="color: #000080; font-weight: bold">this</span>.loading = <span style="color: #000080; font-weight: bold">true</span>
+        <span style="color: #008800; font-style: italic">// Await data posting and response here</span>
+        <span style="color: #000080; font-weight: bold">this</span>.loading = <span style="color: #000080; font-weight: bold">false</span>
+      }
+    }
+  }
+&lt;/script&gt;</pre>
 
       <h2 id="examples">Examples</h2>
       <examples/>
@@ -38,12 +71,12 @@
         <tr>
           <td><code>variant</code></td>
           <td><code>String</code></td>
-          <td>Button style<br/>Read <a href="https://bootstrap-vue.js.org/docs/components/button/#button-contextual-variants">"Button contextual variants" section</a> on BV-site.</td>
+          <td>Button style<br/>Read "<a href="https://bootstrap-vue.js.org/docs/components/button/#button-contextual-variants">Button contextual variants</a>" section on BV-site.</td>
         </tr>
         <tr>
           <td><code>size</code></td>
           <td><code>String</code></td>
-          <td>Button size<br/>Read <a href="https://bootstrap-vue.js.org/docs/components/button/#button-sizing">"Button sizing" section</a> on BV-site.</td>
+          <td>Button size<br/>Read "<a href="https://bootstrap-vue.js.org/docs/components/button/#button-sizing">Button sizing</a>" section on BV-site.</td>
         </tr>
         <tr>
           <td><code>disabled</code></td>
@@ -64,7 +97,6 @@
 </template>
 
 <script>
-  
   import Examples from './components/examples.vue'
 
   export default {
@@ -90,6 +122,10 @@
 
   h1.main b {
     font-weight: 500;
+  }
+
+  p {
+    max-width: 600px;
   }
 
   ul.features li {
