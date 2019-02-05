@@ -31,7 +31,7 @@
           <th colspan="3">Properties</th>
         </tr>
         <tr>
-          <td><code>label</code></td>
+          <td><code>text</code></td>
           <td><code>String</code></td>
           <td>Button label</td>
         </tr>

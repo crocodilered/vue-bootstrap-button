@@ -7,7 +7,7 @@
         :variant="variant"
         :size="size"
         :disabled="disabled"
-        label="Click me!"
+        text="Click me!"
       />
     </div>
     <hr/>
@@ -86,7 +86,7 @@
   :variant="${this.variant}"
   :size="${this.size}"
   :disabled="${this.disabled}"
-  label="Click me!"
+  text="Click me!"
 />`
       }
     },

@@ -7,7 +7,7 @@
     :pressed="state !== 1"
     @click.prevent="click"
   >
-    <span v-show="state === 1">{{ label }}</span>
+    <span v-show="state === 1">{{ text }}</span>
     <span v-show="state === 2" class="rotating">refresh</span>
     <span v-show="state === 3">check</span>
   </b-button>
@@ -49,7 +49,12 @@
 
   export default {
     name: 'Button',
-    props: ['loading', 'variant', 'size', 'label'],
+    props: {
+      'loading': Boolean,
+      'variant': String,
+      'size': String,
+      'text': String
+    },
     data,
     watch,
     methods,
